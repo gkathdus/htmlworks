@@ -34,13 +34,54 @@ header nav{float: right; width: 900px; padding-top: 40px;}
 }
 #topmenu > li > ul > li > a{font-size: 15px; color: #000;}
 #topmenu > li > ul > li > a:hover{color: #f00;}
-main{
-    height: 600px;
-    padding: 5px;
-    border: 5px solid #ccc;
+
+/* index 페이지 스타일 */
+#index{border: 5px solid #ccc;}
+#index h2{margin-top: 100px; text-align: center;}
+
+/* contents 영역 */
+#index #contents{height: 800px; margin-top: 100px;}
+#tabmenu{width: 600px; margin: 0 auto;}
+#tabmenu input[type="radio"]{display: none;}
+#tabmenu label{
+    display: inline-block;
+    padding: 15px 25px; color: #aaa;
 }
-main h2{margin: 10px 20px;}
-section{
+#tabmenu label:hover{color: #222; cursor: pointer;}
+#tabmenu input:checked + label{
+    color: #b00; border: 1px solid #ddd; background: #eee;
+}
+#tabmenu .tabcontent{
+    display: none;
+    padding: 20px 0 0 0;
+    border-top: 1px solid #ddd;
+}
+#tab1:checked ~ #notice,
+#tab2:checked ~ #gallery{display: block;}
+
+#tabmenu .tabcontent h2{display: none;}
+#notice ul{margin-left: 30px; list-style: square;}
+#notice ul li{line-height: 3; font-size: 15px;}
+#gallery ul li{display: inline;}
+
+/* type 페이지 스타일 */
+#type{height: 800px; border: 5px solid #ccc;}
+#type h2{clear: both; padding: 24px 24px 16px;}
+#type section{
+    float: left;
+    width: 30%;
+    height: 520px;
+    border: 1px dotted #ccc;
+    margin: 0 10px 0 14px;
+    padding: 5px;
+}
+#type section h3{
+    background: url(../images/petdog-2.jpg) no-repeat;
+    background-position: 5px 20px;
+    padding: 16px 24px;
+}
+
+#type section{
     float: left;
     width: 31%;   /* main 크기의 31% */
     height: 520px;
@@ -48,8 +89,8 @@ section{
     margin: 5px;
     padding: 5px;
 }
-section h3{
-    background: url(../images/dot.png) no-repeat;
+#type section h3{
+    background: url(../images/petdog-2.jpg) no-repeat;
     background-position: 5px 20px; /*left(x) top(y)*/
     padding: 16px 24px;
 }
